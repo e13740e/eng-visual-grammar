@@ -117,14 +117,16 @@ export default function App() {
 
   return (
     <div className="app-container">
-      {/* Mobile Floating Toggle Button */}
-      <button 
-        className="mobile-menu-toggle"
-        onClick={() => setIsMobileMenuOpen(prev => !prev)}
-        aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
-      >
-        {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-      </button>
+      {/* Mobile Floating Toggle Button (shown only when drawer is closed) */}
+      {!isMobileMenuOpen && (
+        <button 
+          className="mobile-menu-toggle"
+          onClick={() => setIsMobileMenuOpen(true)}
+          aria-label="Open Menu"
+        >
+          <Menu size={22} />
+        </button>
+      )}
 
       {/* Backdrop for closing mobile sidebar on tap outside */}
       {isMobileMenuOpen && (
