@@ -1,0 +1,914 @@
+{
+  "Active Voice": {
+    "Standard Verb": {
+      "Simple": {
+        "Present": {
+          "Affirmative": {
+            "formula": "Subject + base verb V1 (base verb+(-s/-es) for the 3rd person singular (He, She, It)).",
+            "notes": "(+-s or exception: +-es after: (-s/-sh/-ch/-x/-z/-o)/(consonant'y' =\\> consonant'i'+-es)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + do/does not + base verb V1.",
+            "notes": "(auxiliary verbs: (I/You/We/They do), (He/She/It does))."
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + don't/doesn't + base verb V1.",
+            "notes": "(auxiliary verbs in negation: (I/You/We/They don't), (He/She/It doesn't))."
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Do/Does + Subject + base verb V1?",
+            "notes": "(auxiliary verbs: (Do I/You/We/They), (Does He/She/It))."
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Do/Does + Subject + not + base verb V1?",
+            "notes": "(auxiliary verbs: (Do I/You/We/They), (Does He/She/It))."
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Don't/Doesn't + Subject + base verb V1?",
+            "notes": "(auxiliary verbs in negation: (Don't I/You/We/They), (Doesn't He/She/It))."
+          }
+        },
+        "Past": {
+          "Affirmative": {
+            "formula": "Subject + Past verb.",
+            "notes": "(Past verb: regular verb+-ed / 2-form irregular verb)."
+          },
+          "Negative full (not)": {
+            "formula": "Subject + did not + base verb V1.",
+            "notes": "(auxiliary verb: did)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + didn't + base verb V1.",
+            "notes": "(auxiliary verbs in negation: didn't)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Did + Subject + base verb V1?",
+            "notes": "(auxiliary verb: Did)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Did + Subject + not + base verb V1?",
+            "notes": "(auxiliary verb: Did)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Didn't + Subject + base verb V1?",
+            "notes": "(auxiliary verbs in negation: Didn't)"
+          }
+        },
+        "Future": {
+          "Affirmative": {
+            "formula": "Subject + will + base verb V1.",
+            "notes": "(modal auxiliary verbs: will)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + will not + base verb V1.",
+            "notes": "(modal auxiliary verbs: will)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + won't + base verb V1.",
+            "notes": "(modal auxiliary verbs in negation: won't)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Will + Subject + base verb V1?",
+            "notes": "(modal auxiliary verbs: Will)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Will + Subject + not + base verb V1?",
+            "notes": "(modal auxiliary verbs: Will)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Won't + Subject + base verb V1?",
+            "notes": "(modal auxiliary verbs in negation: Won't)"
+          }
+        },
+        "Future in the Past": {
+          "Affirmative": {
+            "formula": "Subject + would + base verb V1.",
+            "notes": "(modal auxiliary verbs: would)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + would not + base verb V1.",
+            "notes": "(modal auxiliary verbs: would)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wouldn't + base verb V1.",
+            "notes": "(modal auxiliary verbs in negation: wouldn't)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Would + Subject + base verb V1?",
+            "notes": "(modal auxiliary verbs: Would)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Would + Subject + not + base verb V1?",
+            "notes": "(modal auxiliary verbs: Would)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wouldn't + Subject + base verb V1?",
+            "notes": "(modal auxiliary verbs in negation: Wouldn't)"
+          }
+        }
+      },
+      "Continuous": {
+        "Present": {
+          "Affirmative": {
+            "formula": "Subject + am/is/are + base verb+-ing.",
+            "notes": "(auxiliary verbs: (I am)(He/She/It is)(You/We/They are))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + am/is/are + not + base verb-ing.",
+            "notes": "(auxiliary verbs: (I am)(He/She/It is)(You/We/They are))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + 'm not/isn't/aren't + base verb-ing.",
+            "notes": "(auxiliary verbs in negation: (I'm not)(He/She/It isn't)(You/We/They aren't))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Am/Is/Are + Subject + base verb-ing?",
+            "notes": "(auxiliary verbs: (Am I)(Is He/She/It)(Are You/We/They))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Am/Is/Are + Subject + not + base verb-ing?",
+            "notes": "(auxiliary verbs: (Am I)(Is He/She/It)(Are You/We/They))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Aren't/Isn't + Subject + base verb-ing?",
+            "notes": "(auxiliary verbs in negation: (Isn't He/She/It)(Aren't I/You/We/They))"
+          }
+        },
+        "Past": {
+          "Affirmative": {
+            "formula": "Subject + was/were + base verb-ing.",
+            "notes": "(auxiliary verbs: (I/He/She/It was)(You/We/They were))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + was/were + not + base verb-ing.",
+            "notes": "(auxiliary verbs: (I/He/She/It was)(You/We/They were))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wasn't/weren't + base verb-ing.",
+            "notes": "(auxiliary verbs in negation: (I/He/She/It wasn't)(You/We/They weren't))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Was/Were + Subject + base verb-ing?",
+            "notes": "(auxiliary verbs: (Was I/He/She/It)(Were You/We/They))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Was/Were + Subject + not + base verb-ing?",
+            "notes": "(auxiliary verbs: (Was I/He/She/It)(Were You/We/They))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wasn't/Weren't + Subject + base verb-ing?",
+            "notes": "(auxiliary verbs in negation: (Wasn't I/He/She/It)(Weren't You/We/They))"
+          }
+        },
+        "Future": {
+          "Affirmative": {
+            "formula": "Subject + will be + base verb-ing.",
+            "notes": "(modal auxiliary verbs: will) (auxiliary verbs: be)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + will not be + base verb-ing.",
+            "notes": "(modal auxiliary verbs: will) (auxiliary verbs: be)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + won't be + base verb-ing.",
+            "notes": "(modal auxiliary verbs in negation: won't) (auxiliary verbs: be)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Will + Subject + be + base verb-ing?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary verbs: be)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Will + Subject + not be + base verb-ing?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary verbs: be)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Won't + Subject + be + base verb-ing?",
+            "notes": "(modal auxiliary verbs in negation: Won't) (auxiliary verbs: be)"
+          }
+        },
+        "Future in the Past": {
+          "Affirmative": {
+            "formula": "Subject + would be + base verb-ing.",
+            "notes": "(modal auxiliary verbs: would) (auxiliary verbs: be)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + would not be + base verb-ing.",
+            "notes": "(modal auxiliary verbs: would) (auxiliary verbs: be)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wouldn't be + base verb-ing.",
+            "notes": "(modal auxiliary verbs in negation: wouldn't) (auxiliary verbs: be)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Would + Subject + be + base verb-ing?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary verbs: be)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Would + Subject + not be + base verb-ing?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary verbs: be)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wouldn't + Subject + be + base verb-ing?",
+            "notes": "(modal auxiliary verbs in negation: Wouldn't) (auxiliary verbs: be)"
+          }
+        }
+      },
+      "Perfect": {
+        "Present": {
+          "Affirmative": {
+            "formula": "Subject + have/has + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs: (I/You/We/They have)(He/She/It has))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + have/has not + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs: (I/You/We/They have)(He/She/It has))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + haven't/hasn't + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs in negation: (I/You/We/They haven't)(He/She/It hasn't))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Have/Has + Subject + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs: (Have I/You/We/They)(Has He/She/It))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Have/Has + Subject + not + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs: (Have I/You/We/They)(Has He/She/It))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Haven't/Hasn't + Subject + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs in negation: (Haven't I/You/We/They)(Hasn't He/She/It))"
+          }
+        },
+        "Past": {
+          "Affirmative": {
+            "formula": "Subject + had + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs: had)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + had not + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs: had)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + hadn't + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs in negation: hadn't)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Had + Subject + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs: Had)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Had + Subject + not + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs: Had)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Hadn't + Subject + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (auxiliary verbs in negation: Hadn't)"
+          }
+        },
+        "Future": {
+          "Affirmative": {
+            "formula": "Subject + will have + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs: will) (auxiliary verbs: have)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + will not have + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs: will) (auxiliary verbs: have)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + won't have + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs in negation: won't) (auxiliary verbs: have)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Will + Subject + have + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs: Will) (auxiliary verbs: have)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Will + Subject + not have + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs: Will) (auxiliary verbs: have)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Won't + Subject + have + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs in negation: Won't) (auxiliary verbs: have)"
+          }
+        },
+        "Future in the Past": {
+          "Affirmative": {
+            "formula": "Subject + would have + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs: would) (auxiliary verbs: have)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + would not have + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs: would) (auxiliary verbs: have)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wouldn't have + Past Participle verb.",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs in negation: wouldn't) (auxiliary verbs: have)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Would + Subject + have + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs: Would) (auxiliary verbs: have)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Would + Subject + not have + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs: Would) (auxiliary verbs: have)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wouldn't + Subject + have + Past Participle verb?",
+            "notes": "(Past Participle: regular verb+-ed / 3-form irregular verb) (modal auxiliary verbs in negation: Wouldn't) (auxiliary verbs: have)"
+          }
+        }
+      },
+      "Perfect Continuous": {
+        "Present": {
+          "Affirmative": {
+            "formula": "Subject + have/has been + base verb-ing.",
+            "notes": "(auxiliary structure: (I/You/We/They have been)(He/She/It has been))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + have/has not been + base verb-ing.",
+            "notes": "(auxiliary structure in negation: (I/You/We/They have not been)(He/She/It has not been))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + haven't/hasn't been + base verb-ing.",
+            "notes": "(auxiliary structure in negation: (I/You/We/They haven't been)(He/She/It hasn't been))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Have/Has + Subject + been + base verb-ing?",
+            "notes": "(auxiliary structure: (Have I/You/We/They been)(Has He/She/It been))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Have/Has + Subject + not been + base verb-ing?",
+            "notes": "(auxiliary structure: (Have I/You/We/They not been)(Has He/She/It not been))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Haven't/Hasn't + Subject + been + base verb-ing?",
+            "notes": "(auxiliary structure in negation: (Haven't I/You/We/They been)(Hasn't He/She/It been))"
+          }
+        },
+        "Past": {
+          "Affirmative": {
+            "formula": "Subject + had been + base verb-ing.",
+            "notes": "(auxiliary structure: had been)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + had not been + base verb-ing.",
+            "notes": "(auxiliary structure in negation: had not been)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + hadn't been + base verb-ing.",
+            "notes": "(auxiliary structure in negation: hadn't been)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Had + Subject + been + base verb-ing?",
+            "notes": "(auxiliary structure: Had Subject been)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Had + Subject + not been + base verb-ing?",
+            "notes": "(auxiliary structure in negation: Had Subject not been)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Hadn't + Subject + been + base verb-ing?",
+            "notes": "(auxiliary structure in negation: Hadn't Subject been)"
+          }
+        },
+        "Future": {
+          "Affirmative": {
+            "formula": "Subject + will have been + base verb-ing.",
+            "notes": "(modal auxiliary verbs: will) (auxiliary structure: have been)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + will not have been + base verb-ing.",
+            "notes": "(modal auxiliary verbs: will) (auxiliary structure: have been)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + won't have been + base verb-ing.",
+            "notes": "(modal auxiliary verbs in negation: won't) (auxiliary structure: have been)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Will + Subject + have been + base verb-ing?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary structure: have been)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Will + Subject + not have been + base verb-ing?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary structure: have been)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Won't + Subject + have been + base verb-ing?",
+            "notes": "(modal auxiliary verbs in negation: Won't) (auxiliary structure: have been)"
+          }
+        },
+        "Future in the Past": {
+          "Affirmative": {
+            "formula": "Subject + would have been + base verb-ing.",
+            "notes": "(modal auxiliary verbs: would) (auxiliary structure: have been)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + would not have been + base verb-ing.",
+            "notes": "(modal auxiliary verbs: would) (auxiliary structure: have been)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wouldn't have been + base verb-ing.",
+            "notes": "(modal auxiliary verbs in negation: wouldn't) (auxiliary structure: have been)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Would + Subject + have been + base verb-ing?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary structure: have been)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Would + Subject + not have been + base verb-ing?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary structure: have been)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wouldn't + Subject + have been + base verb-ing?",
+            "notes": "(modal auxiliary verbs in negation: Wouldn't) (auxiliary structure: have been)"
+          }
+        }
+      }
+    },
+    "to be": {
+      "Simple": {
+        "Present": {
+          "Affirmative": {
+            "formula": "Subject + am/is/are + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age).",
+            "notes": "(verbs 'to be': (I am)(He/She/It is)(You/We/They are))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + am/is/are + not + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age).",
+            "notes": "(verbs 'to be': (I am)(He/She/It is)(You/We/They are))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + 'm not/isn't/aren't + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age).",
+            "notes": "(verbs 'to be' in negation: (I'm not)(He/She/It isn't)(You/We/They aren't))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Am/Is/Are + Subject + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age)?",
+            "notes": "(verbs 'to be': (Am I)(Is He/She/It)(Are You/We/They))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Am/Is/Are + Subject + not + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age)?",
+            "notes": "(verbs 'to be': (Am I)(Is He/She/It)(Are You/We/They))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Aren't/Isn't + Subject + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age)?",
+            "notes": "(verbs 'to be' in negation: (Isn't He/She/It)(Aren't I/You/We/They))"
+          }
+        },
+        "Past": {
+          "Affirmative": {
+            "formula": "Subject + was/were + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age).",
+            "notes": "(verbs 'to be': (I/He/She/It was)(You/We/They were))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + was/were + not + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age).",
+            "notes": "(verbs 'to be': (I/He/She/It was)(You/We/They were))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wasn't/weren't + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age).",
+            "notes": "(verbs 'to be' in negation: (I/He/She/It wasn't)(You/We/They weren't))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Was/Were + Subject + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age)?",
+            "notes": "(verbs 'to be': (Was I/He/She/It)(Were You/We/They))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Was/Were + Subject + not + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age)?",
+            "notes": "(verbs 'to be': (Was I/He/She/It)(Were You/We/They))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wasn't/Weren't + Subject + Complement (Noun/Pronoun/Gerund/Adjective/Infinitive/Adverb of place/Prepositional Phrase/Numerical/Age)?",
+            "notes": "(verbs 'to be' in negation: (Wasn't I/He/She/It)(Weren't You/We/They))"
+          }
+        }
+      }
+    }
+  },
+  "Passive Voice": {
+    "Standard Verb": {
+      "Simple": {
+        "Present": {
+          "Affirmative": {
+            "formula": "Subject + am/is/are + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs: (I am)(He/She/It is)(You/We/They are))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + am/is/are + not + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs: (I am)(He/She/It is)(You/We/They are))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + 'm not/isn't/aren't + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs in negation: (I'm not)(He/She/It isn't)(You/We/They aren't))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Am/Is/Are + Subject + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs: (Am I)(Is He/She/It)(Are You/We/They))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Am/Is/Are + Subject + not + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs: (Am I)(Is He/She/It)(Are You/We/They))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Aren't/Isn't + Subject + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs in negation: (Isn't He/She/It)(Aren't I/You/We/They))"
+          }
+        },
+        "Past": {
+          "Affirmative": {
+            "formula": "Subject + was/were + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs: (I/He/She/It was)(You/We/They were))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + was/were + not + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs: (I/He/She/It was)(You/We/They were))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wasn't/weren't + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs in negation: (I/He/She/It wasn't)(You/We/They weren't))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Was/Were + Subject + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs: (Was I/He/She/It)(Were You/We/They))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Was/Were + Subject + not + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs: (Was I/He/She/It)(Were You/We/They))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wasn't/Weren't + Subject + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs in negation: (Wasn't I/He/She/It)(Weren't You/We/They))"
+          }
+        },
+        "Future": {
+          "Affirmative": {
+            "formula": "Subject + will be + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: will) (auxiliary verbs: be)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + will not be + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: will) (auxiliary verbs: be)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + won't be + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs in negation: won't) (auxiliary verbs: be)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Will + Subject + be + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary verbs: be)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Will + Subject + not be + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary verbs: be)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Won't + Subject + be + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs in negation: Won't) (auxiliary verbs: be)"
+          }
+        },
+        "Future in the Past": {
+          "Affirmative": {
+            "formula": "Subject + would be + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: would) (auxiliary verbs: be)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + would not be + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: would) (auxiliary verbs: be)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wouldn't be + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs in negation: wouldn't) (auxiliary verbs: be)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Would + Subject + be + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary verbs: be)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Would + Subject + not be + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary verbs: be)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wouldn't + Subject + be + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs in negation: Wouldn't) (auxiliary verbs: be)"
+          }
+        }
+      },
+      "Continuous": {
+        "Present": {
+          "Affirmative": {
+            "formula": "Subject + am/is/are being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs: (I am being)(He/She/It is being)(You/We/They are being))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + am/is/are not being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs in negation: (I am not being)(He/She/It is not being)(You/We/They are not being))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + 'm not/isn't/aren't being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs in negation: (I'm not being)(He/She/It isn't being)(You/We/They aren't being))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Am/Is/Are + Subject + being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs: (Am I being)(Is He/She/It being)(Are You/We/They being))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Am/Is/Are + Subject + not being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs in negation: (Am I not being)(Is He/She/It not being)(Are You/We/They not being))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Aren't/Isn't + Subject + being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs in negation: (Isn't He/She/It being)(Aren't I/You/We/They being))"
+          }
+        },
+        "Past": {
+          "Affirmative": {
+            "formula": "Subject + was/were being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs: (I/He/She/It was being)(You/We/They were being))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + was/were not being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs: (I/He/She/It was not being)(You/We/They were not being))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wasn't/weren't being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs in negation: (I/He/She/It wasn't being)(You/We/They weren't being))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Was/Were + Subject + being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs: (Was I/He/She/It being)(Were You/We/They being))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Was/Were + Subject + not being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs: (Was I/He/She/It not being)(Were You/We/They not being))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wasn't/Weren't + Subject + being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs in negation: (Wasn't I/He/She/It being)(Weren't You/We/They being))"
+          }
+        },
+        "Future": {
+          "Affirmative": {
+            "formula": "Subject + will be being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: will) (auxiliary verbs: be being)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + will not be being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: will) (auxiliary verbs: be being)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + won't be being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs in negation: won't) (auxiliary verbs: be being)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Will + Subject + be being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary verbs: be being)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Will + Subject + not be being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary verbs: be being)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Won't + Subject + be being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs in negation: Won't) (auxiliary verbs: be being)"
+          }
+        },
+        "Future in the Past": {
+          "Affirmative": {
+            "formula": "Subject + would be being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: would) (auxiliary verbs: be being)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + would not be being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: would) (auxiliary verbs: be being)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wouldn't be being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs in negation: wouldn't) (auxiliary verbs: be being)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Would + Subject + be being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary verbs: be being)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Would + Subject + not be being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary verbs: be being)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wouldn't + Subject + be being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs in negation: Wouldn't) (auxiliary verbs: be being)"
+          }
+        }
+      },
+      "Perfect": {
+        "Present": {
+          "Affirmative": {
+            "formula": "Subject + have/has been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs: (I/You/We/They have been)(He/She/It has been))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + have/has not been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs: (I/You/We/They have not been)(He/She/It has not been))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + haven't/hasn't been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs in negation: (I/You/We/They haven't been)(He/She/It hasn't been))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Have/Has + Subject + been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs: (Have I/You/We/They been)(Has He/She/It been))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Have/Has + Subject + not been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs: (Have I/You/We/They not been)(Has He/She/It not been))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Haven't/Hasn't + Subject + been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs in negation: (Haven't I/You/We/They been)(Hasn't He/She/It been))"
+          }
+        },
+        "Past": {
+          "Affirmative": {
+            "formula": "Subject + had been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs: had been)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + had not been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs: had been)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + hadn't been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary verbs in negation: hadn't been)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Had + Subject + been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs: Had been)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Had + Subject + not been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs: Had not been)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Hadn't + Subject + been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary verbs in negation: Hadn't been)"
+          }
+        },
+        "Future": {
+          "Affirmative": {
+            "formula": "Subject + will have been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: will) (auxiliary verbs: have been)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + will not have been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: will) (auxiliary verbs: have been)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + won't have been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs in negation: won't) (auxiliary verbs: have been)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Will + Subject + have been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary verbs: have been)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Will + Subject + not have been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary verbs: have been)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Won't + Subject + have been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs in negation: Won't) (auxiliary verbs: have been)"
+          }
+        },
+        "Future in the Past": {
+          "Affirmative": {
+            "formula": "Subject + would have been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: would) (auxiliary verbs: have been)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + would not have been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: would) (auxiliary verbs: have been)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wouldn't have been + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs in negation: wouldn't) (auxiliary verbs: have been)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Would + Subject + have been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary verbs: have been)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Would + Subject + not have been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary verbs: have been)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wouldn't + Subject + have been + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs in negation: Wouldn't) (auxiliary verbs: have been)"
+          }
+        }
+      },
+      "Perfect Continuous": {
+        "Present": {
+          "Affirmative": {
+            "formula": "Subject + have/has been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary structure: (I/You/We/They have been being)(He/She/It has been being))"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + have/has not been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary structure in negation: (I/You/We/They have not been being)(He/She/It has not been being))"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + haven't/hasn't been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary structure in negation: (I/You/We/They haven't been being)(He/She/It hasn't been being))"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Have/Has + Subject + been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary structure: (Have I/You/We/They been being)(Has He/She/It been being))"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Have/Has + Subject + not been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary structure: (Have I/You/We/They not been being)(Has He/She/It not been being))"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Haven't/Hasn't + Subject + been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary structure in negation: (Haven't I/You/We/They been being)(Hasn't He/She/It been being))"
+          }
+        },
+        "Past": {
+          "Affirmative": {
+            "formula": "Subject + had been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary structure: had been being)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + had not been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary structure in negation: had not been being)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + hadn't been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(auxiliary structure in negation: hadn't been being)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Had + Subject + been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary structure: Had Subject been being)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Had + Subject + not been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary structure in negation: Had Subject not been being)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Hadn't + Subject + been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(auxiliary structure in negation: Hadn't Subject been being)"
+          }
+        },
+        "Future": {
+          "Affirmative": {
+            "formula": "Subject + will have been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: will) (auxiliary structure: have been being)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + will not have been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: will) (auxiliary structure: have been being)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + won't have been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs in negation: won't) (auxiliary structure: have been being)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Will + Subject + have been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary structure: have been being)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Will + Subject + not have been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Will) (auxiliary structure: have been being)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Won't + Subject + have been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs in negation: Won't) (auxiliary structure: have been being)"
+          }
+        },
+        "Future in the Past": {
+          "Affirmative": {
+            "formula": "Subject + would have been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: would) (auxiliary structure: have been being)"
+          },
+          "Negative full (not)": {
+            "formula": "Subject + would not have been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs: would) (auxiliary structure: have been being)"
+          },
+          "Negative contracted (n't)": {
+            "formula": "Subject + wouldn't have been being + Past Participle verb (regular verb+-ed / V3 irregular verb).",
+            "notes": "(modal auxiliary verbs in negation: wouldn't) (auxiliary structure: have been being)"
+          },
+          "Interrogative about Affirmative": {
+            "formula": "Would + Subject + have been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary structure: have been being)"
+          },
+          "Interrogative about Negative full (not)": {
+            "formula": "Would + Subject + not have been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs: Would) (auxiliary structure: have been being)"
+          },
+          "Interrogative about Negative contracted (n't)": {
+            "formula": "Wouldn't + Subject + have been being + Past Participle verb (regular verb+-ed / V3 irregular verb)?",
+            "notes": "(modal auxiliary verbs in negation: Wouldn't) (auxiliary structure: have been being)"
+          }
+        }
+      }
+    }
+  }
+}
