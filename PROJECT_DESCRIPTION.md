@@ -1,236 +1,322 @@
-# ENG Visual Grammar: Інтерактивна 3D/4D Матриця Англійської Граматики
+# ENG Visual Grammar
 
-## 1. Загальна Концепція та Філософія Проєкту
+## 1. General Concept and Project Philosophy
 
-**ENG Visual Grammar** — це просторова математично-лінгвістична візуалізаційна система, яка перетворює складну, багаторівневу структуру граматики англійської мови з формальних пласких таблиць у динамічний, неперервний 3D/4D векторний гіперпростір.
+**ENG Visual Grammar** is a dynamic spatial linguistic visualization system for the spatial representation of the English grammar structure.
 
-Фундаментальна ідея проєкту полягає у представленні англійської граматичної системи як **прозорої неонової 3D-матриці (гіперкуба)** з чітким простором станів:
+The core idea of the project is to present the English grammatical system as a metaphorical cohesive spherical object that transforms into a 5-parameter matrix representation in 3D space.
 
-* **Загальна кількість кінцевих формульних станів:**
-  $$4 \text{ Аспекти} \times 4 \text{ Часи} \times 2 \text{ Залоги (Voice)} \times 6 \text{ Типів речень} = 192 \text{ базових формульних шаблони}$$
+1.1. Grammatical parametrization of the English language:
 
-* **Поліморфний умовний шар (Polymorphic IF-branch для дієслова *to be*):**
-  $$+12 \text{ спеціалізованих шаблонів} \quad (2 \text{ Часи} \times 1 \text{ Аспект} \times 1 \text{ Стан} \times 6 \text{ Типів речень})$$
+1.1.1. **Base state space of the English grammatical system:**
+* **Aspects:** 4
+  * `Simple`
+  * `Continuous`
+  * `Perfect`
+  * `Perfect Continuous`
+* **Tenses:** 4
+  * `Present`
+  * `Past`
+  * `Future`
+  * `Future in the Past`
+* **Voices:** 2
+  * `Active Voice`
+  * `Passive Voice`
+* **Sentence Types:** 6
+  * `Affirmative`
+  * `Negative full (not)`
+  * `Negative contracted (n't)`
+  * `Interrogative about Affirmative` 
+  * `Interrogative about Negative full (not)` 
+  * `Interrogative about Negative contracted (n't)`
 
-Загальна потужність системи становить **204 граматичні конфігурації**, впорядковані у просторі без жодного інформаційного хаосу завдяки принципу ієрархічної просторової декомпозиції (Exploded View).
+  $$4 \text{ Aspects} \times 4 \text{ Tenses} \times 2 \text{ Voices} \times 6 \text{ Sentence Types} = 192 \text{ base formula templates}$$
+
+1.1.2. **Polymorphic conditional branch (Polymorphic IF-branch) for the verb *to be*:**
+  $$+12 \text{ specialized templates} \quad (2 \text{ Tenses} \times 1 \text{ Aspect} \times 1 \text{ Voice} \times 6 \text{ Sentence Types})$$
+
+In total, this 5-level grammatical structure spatially incorporates **204 grammatical configurations**.
 
 ---
 
-## 2. Просторова Архітектура Граматичної Матриці
+## 2. Spatial Architecture of the Grammar Matrix
 
-Простір граматичних станів проєкту розкладено по трьох просторових осях $X, Y, Z$ та одному внутрішньому вектору $V$:
+The spatial representation is implemented within the **World CS (Three.js)** coordinate system, where conventionally:
+* the **X-axis** is horizontal (directed horizontally to the right);
+* the **Y-axis** is vertical (directed vertically upwards);
+* the **Z-axis** is depth (directed perpendicular to the screen, towards the viewer).
 
 ```
-               Y-вісь (Часові перспективи: Present, Past, Future, Future in the Past)
+               Y-axis World CS (Tenses: Present, Past, Future, Future in the Past)
                  ▲
                  │   ┌─────────────────────────┐
                  │  /                         /│
                  │ /                         / │
                  │/                         /  │
-                 ├─────────────────────────┼───┼──► X-вісь (Аспекти: Simple, Continuous, Perfect, Perfect Continuous)
+                 │─────────────────────────┼───┼──► X-axis World CS (Aspects: Simple, Continuous, Perfect, Perfect Continuous)
                 /│                         │   /
                / │                         │  /
               /  │                         │ /
              ▼   └─────────────────────────┘/
-   Z-вісь (Залог: Active / Passive)
+   Z-axis World CS (Voice: Active / Passive)
 ```
 
-### 2.1. Осі 3D-Матриці ($4 \times 4 \times 2 = 32 \text{ Блоки-Комірки}$)
+### 2.1. Matrix Axes in the World Coordinate System **World CS (Three.js)**
 
-1. **Вісь X (4 Аспекти / Aspect):**
-   * `Simple` (Простий)
-   * `Continuous` (Тривалий)
-   * `Perfect` (Доконаний)
-   * `Perfect Continuous` (Доконано-тривалий)
-2. **Вісь Y (4 Часові Перспективи / Time):**
-   * `Present` (Теперішній)
-   * `Past` (Минулий)
-   * `Future` (Майбутній)
-   * `Future in the Past` (Майбутній у минулому)
-3. **Вісь Z (2 Шари Залогу / Voice):**
-   * `Active Voice` (Активний залог) — Передній шар ($Z = 0$)
-   * `Passive Voice` (Пасивний залог) — Задній шар ($Z = -3.3$)
+1. **X-axis (4 Aspects):**
+   * `Simple`
+   * `Continuous`
+   * `Perfect`
+   * `Perfect Continuous`
+2. **Y-axis (4 Tenses):**
+   * `Present`
+   * `Past`
+   * `Future`
+   * `Future in the Past`
+3. **Z-axis (2 Voice Layers):**
+   * `Active Voice` — Front matrix layer
+   * `Passive Voice` — Back matrix layer
 
-### 2.2. Внутрішній Вектор V (6 Типів Речень у кожній Комірці)
+### 2.2. Visual Spatial Frame in the Scene
 
-При деталізації (розшаруванні) будь-якої з 32 комірок вона розкривається на 6 рівновіддалених паралелепіпедів-шарів:
-1. **Affirmative** (Стверджувальне) — Неоновий зелений (`#39FF14`) / Жовтий (`#FFE600`)
-2. **Negative full (not)** (Заперечне повне) — М'ятний (`#00FF88`) / Золотий (`#FFAF00`)
-3. **Negative contracted (n't)** (Заперечне скорочене) — Блакитний (`#00F0FF`) / Оранжевий (`#FF7A00`)
-4. **Interrogative about Affirmative** (Питальне до ствердження) — Синій (`#007FFF`) / Червоно-оранжевий (`#FF4500`)
-5. **Interrogative about Negative full (not)** (Питальне до повного заперечення) — Фіолетовий (`#8F00FF`) / Неоновий червоний (`#FF003C`)
-6. **Interrogative about Negative contracted (n't)** (Питальне до скороченого заперечення) — Пінковий (`#FF007F`) / Пурпуровий (`#E600FF`)
+For engineering spatial interpretation, a 3D visualization frame **Robot CS (XYZ Frame)** and an anatomical human hand representation **Robotic Right-Hand Rule Frame** have been integrated into the scene in accordance with the **International Industrial Robotics Standard (ISO 9787 / Right-Hand Rule)**. (P.S. The project author deliberately chose this spatial representation methodology in this hobby project solely because they work and study in the field of industrial robotic automation).
 
-### 2.3. Поліморфний Перемикач `to be` (5-й Умовний Рівень)
+#### Positioning of the **Robotic Right-Hand Rule Frame** relative to **World CS (Three.js)**:
+* **$\vec{X}_{\text{robot}}$ (Red vector / `Index` finger):**
+  * Directed along the $+Z_{\text{world}}$ axis.
+* **$\vec{Y}_{\text{robot}}$ (Green vector / `Middle` finger):**
+  * Directed along the $+X_{\text{world}}$ axis.
+* **$\vec{Z}_{\text{robot}}$ (Cyan vector / `Thumb`):**
+  * Directed along the $+Y_{\text{world}}$ axis (vertically upwards).
 
-* **Доступність:** Тумблер `to be` доступний для активації на всіх 16 комірках `Active Voice`.
-* **Візуальний ефект трансформації:**
-  * Для виняткових форм (`Present Simple Active` та `Past Simple Active`) перемикання на `to be` динамічно змінює синтаксичну структуру (вилучає допоміжні дієслова *do/does/did*) та змінює колір підсвітки з неоново-синього на яскраво-золотий.
-  * Для інших 14 комірок Active Voice тумблер зберігає вигляд і можливість перемикання, показуючи універсальність моделі, але колірна схема залишається незмінною (що візуалізує відсутність унікальної структури).
-* **Повне блокування Passive Voice:**
-  * Оскільки дієслово *to be* не має пасивного стану, при включеному тумблері `to be` **весь шар Passive Voice (всі 16 комірок)** автоматично приглушується до мінімальної прозорості ($1.5\%$) та стає **абсолютно недоступним для кліку та активації**.
+```
+               Z-axis World CS (Tenses: Present, Past, Future, Future in the Past)
+                 ▲
+                 │   ┌─────────────────────────┐
+                 │  /                         /│
+                 │ /                         / │
+                 │/                         /  │
+                 │─────────────────────────┼───┼──► Y-axis World CS (Aspects: Simple, Continuous, Perfect, Perfect Continuous)
+                /│                         │   /
+               / │                         │  /
+              /  │                         │ /
+             ▼   └─────────────────────────┘/
+   X-axis World CS (Voice: Active / Passive)                 
+```
+
+### 2.3. Internal Vector V (6 Information Slabs in Each Cell)
+
+Upon entering the exploded view mode (`explode`), the active cube (one of 32) splits into 6 horizontal slabs/boards, each corresponding to a designated sentence type:
+1. **Affirmative** — Neon Green (`#39FF14`) / Gold (`#FFE600`)
+2. **Negative full (not)** — Mint (`#00FF88`) / Golden Yellow (`#FFAF00`)
+3. **Negative contracted (n't)** — Cyan (`#00F0FF`) / Orange (`#FF7A00`)
+4. **Interrogative about Affirmative** — Blue (`#007FFF`) / Red-Orange (`#FF4500`)
+5. **Interrogative about Negative full (not)** — Violet (`#8F00FF`) / Carmine (`#FF003C`)
+6. **Interrogative about Negative contracted (n't)** — Magenta (`#FF007F`) / Purple (`#E600FF`)
+
+### 2.4. Polymorphic `to be` Switch and Dynamic Passive Voice Invalidation
+
+* **Exception Handling Logic:** The `to be` toggle switches the matrix into the specialized linking verb operation mode. In the `Present Simple Active` and `Past Simple Active` cells, the syntactic model automatically reconstructs (removing auxiliary operators *do/does/did*), and the color palette transitions to noble gold (`#FFE600` / `#FFAF00`).
+* **Absolute Passive Voice Blocking:** Since the intransitive verb *to be* grammatically cannot form a Passive Voice, activating the `to be` switch instantly renders the entire rear Passive Voice layer ($16 \text{ cubes}$) inactive: opacity drops to $1.5\%$, and clicks as well as raycasting are completely blocked.
 
 ---
 
-## 3. Математична Модель Вступної Анімації та Закон Збереження Об'єму
+## 3. Intro Animation Model
 
-Вступна анімація (Intro Sequence) демонструє процес зародження та просторової сегментації всієї граматичної системи з єдиного цілісного об'єкта.
+The intro sequence demonstrates the presentation of a cohesive spherical object followed by its topological transformation: first into a cubic object, which in turn transforms into a cuboid (parallelepiped), which then separates into 32 individual cubes.
 
-### 3.1. Фундаментальна Математична Тотожність Збереження Об'єму
+### 3.1. Volume Conservation
 
-Загальний об'єм матеріалу в сцені дорівнює **константі $V_{total} = 87.808 \text{ кубічних одиниць}$** на всіх 4 етапах трансформації:
+The total volume of material in the scene is a strict invariant constant **$V_{total} = 87.808 \text{ cubic units}$** across all transformation phases — from the initial perfect sphere to the 32 matrix cubes:
 
-$$V_{total} = V_{cube} = V_{parallelepiped} = \sum_{i=1}^{32} V_{grid\_cube_i} = 87.808$$
+$$V_{total} = V_{sphere} = V_{cube} = V_{parallelepiped} = \sum_{i=1}^{32} V_{grid\_cube_i} = 87.808$$
 
 $$\begin{aligned}
+V_{sphere} &= \frac{4}{3} \pi R^3 = 87.808 \quad \Longrightarrow \quad R = \sqrt[3]{\frac{3 \cdot 87.808}{4\pi}} \approx 2.7573 \\
 V_{cube} &= (4.4447)^3 = 87.808 \\
 V_{parallelepiped} &= 5.6 \times 5.6 \times 2.8 = 87.808 \\
 V_{32\_cubes} &= 32 \times (1.4)^3 = 32 \times 2.744 = 87.808
 \end{aligned}$$
 
 ```
- ┌────────────────┐         ┌──────────────────────────────┐         ┌───┐ ┌───┐ ┌───┐ ┌───┐
- │                │         │                              │         └───┘ └───┘ └───┘ └───┘
- │   ІДЕАЛЬНИЙ    │  ─────► │   ПЛАСТИЧНИЙ ПАРАЛЕЛОГРАМ    │  ─────► ┌───┐ ┌───┐ ┌───┐ ┌───┐
- │      КУБ       │         │                              │         └───┘ └───┘ └───┘ └───┘
- │  (S = 4.4447)  │         │    (5.6 х 5.6 х 2.8)         │         32 МАТРИЧНИХ КУБИКИ
- └────────────────┘         └──────────────────────────────┘         (1.4 х 1.4 х 1.4 кожен)
+  ╭────────╮         ┌────────────────┐         ┌──────────────────────────────┐         ┌───┐ ┌───┐ ┌───┐ ┌───┐
+ │          │        │                │         │                              │         └───┘ └───┘ └───┘ └───┘
+│   SPHERE   │ ────► │  PERFECT CUBE  │  ─────► │      PLASTIC PARALLELEPIPED  │  ─────► ┌───┐ ┌───┐ ┌───┐ ┌───┐
+│ (R=2.7573) │       │                │         │                              │         └───┘ └───┘ └───┘ └───┘
+ │          │        │  (S = 4.4447)  │         │      (5.6 x 5.6 x 2.8)       │         32 MATRIX CUBES
+  ╰────────╯         └────────────────┘         └──────────────────────────────┘         (1.4 x 1.4 x 1.4 each)
 ```
 
-### 3.2. Чотири Етапи Вступної Анімації
+### 3.2. Stages of Intro Morphing and Decomposition
 
-1. **Етап 1: Старт із Ідеального Куба ($t \in [0.00, 0.15]$)**
-   * Сцена відкривається одразу з **100% ідеального неоново-зеленого куба** ($4.4447 \times 4.4447 \times 4.4447$) з бритвено-гострими 90-градусними ребрами (`<Edges opacity={0.95}>`). Жодних сфер чи нечітких точок.
-2. **Етап 2: Динамічне Просторове Розтягування ($t \in [0.15, 0.48]$)**
-   * **Двофазна швидкість розтягування:** Перші $4/5$ розтягування (до 80% габаритів) відбуваються вдвічі швидше, а останній $1/5$ етап розтягування гальмує плавно та м'яко фіксується у точних розмірах паралелепіпеда ($5.6 \times 5.6 \times 2.8$).
-3. **Етап 3: Плавне Проявлення Внутрішніх Граней Сітки ($t \in [0.48, 0.58]$)**
-   * Внутрішній швовий рельєф 32 кубів проявляється завдяки плавній інтерполяції (Bleed-In Cross-Fade) без жодного візуального стрибка чи вискакування ліній.
-4. **Етап 4: Втричі Плавніше Розшарування на 32 Куби Matrix Grid ($t \in [0.58, 1.00]$)**
-   * Розпад здійснюється за допомоги **Квінтивної кривої Smoothstep 2-го порядку неперервності ($C^2$ continuity)**:
+1. **Phase 0: Initial Sphere and Morphing into Monolithic Cube ($t \in [0.0\text{s}, 1.5\text{s}]$):**
+   * The scene opens with a **perfect neon sphere** of radius $R = 2.7573$ as a symbol of the undivided and holistic nature of language prior to formalization.
+   * A high-density polygonal mesh (Subdivision 24 segments) is utilized.
+   * A smooth vertex morphing of positions and normals takes place along a $C^2$-smooth quintic curve: every point on the spherical surface migrates to the coordinates of a perfect cube with side $S = 4.4447$ with zero volume loss.
+2. **Phase 1: Monolithic Cube ($t \in [0.00, 0.15]$ of the intro cycle):**
+   * Settling of the perfect neon-emerald cube ($4.4447 \times 4.4447 \times 4.4447$) with sharp outline edges (`<Edges opacity={0.95}>`).
+3. **Phase 2: Non-linear Stretching ($t \in [0.15, 0.48]$):**
+   * Two-phase elongation into a plastic cuboid ($5.6 \times 5.6 \times 2.8$): the first 80% of travel progresses dynamically, while the final 20% cushions with gentle damping.
+4. **Phase 3: Emergence of Internal Seams ($t \in [0.48, 0.58]$):**
+   * Internal seams and partitioning into 32 cells smoothly fade in via optical cross-fading without visual artifacts.
+5. **Phase 4: Smooth Dispersion into 32 Cubes ($t \in [0.58, 1.00]$):**
+   * Expansion of the 32 cubes to their target grid coordinates governed by a second-order Smoothstep quintic curve:
      $$\mathbf{easeP4}(p_4) = 6 p_4^5 - 15 p_4^4 + 10 p_4^3$$
-   * Гарантує нульове початкове прискорення та нульовий ривок при зупинці ($f'(0)=0, f''(0)=0, f'(1)=0, f''(1)=0$).
-   * 32 куби м'яко розсуваються в просторі на власні позиції 3D-матриці протягом $\sim 5$ секунд.
+     ensuring zero initial and final acceleration ($f'(0)=0, f''(0)=0, f'(1)=0, f''(1)=0$).
 
 ---
 
-## 4. Інтерактивна Механіка Двоетапного Висування та Розшарування
+## 4. Complete 7-Stage Kinematics and Interactivity Specification
 
-Коли користувач взаємодіє з 3D-матрицею в робочому режимі:
+The system implements continuous, physically coherent transformation kinematics for each of the 32 grammatical cubes:
 
-### 4.1. Автономність Камери (No Auto-Camera Jump)
-* Вибір чи активація будь-якої комірки **НЕ змінює кут огляду та дистанцію камери**. Користувач зберігає повний контроль над обертанням та зумом через `OrbitControls`.
+### Stage 1: Monolithic Cube Activation (`explode: OFF`)
+* Clicking on any of the 32 grid cubes initiates a smooth glide forward along the Z-axis ($Z = basePos.z \pm 0.8$) via a smoothed equation `lerp(..., 0.055)`.
+* The cube renders as a **100% solid monolithic glass object without internal lines or seams**, featuring crisp 3D typography for tense, aspect, and voice on the front face.
 
-### 4.2. Двоетапна Візуалізація Активації та Розшарування (Exploded View)
+### Stage 2: Smooth Retraction into the Matrix on Cube Deselection
+* Upon deactivation or switching to another cube, the previous cube does not snap or disappear abruptly; it smoothly glides back into its original grid slot (`wasJustDeselected` reverse `lerp(..., 0.075)` mechanism), eliminating any visual discreteness.
 
-1. **Етап 1: Smooth Drawer Slide Out (Висування шухляди)**
-   * При кліку на комірку вона плавно висувається вперед по осі Z ($Z + 0.8$ для Active, $Z - 0.8$ для Passive).
-   * Колір куба плавно змінюється з базового блакитного/рожевого на неоновий зелений (`#39FF14`) або неоново-жовтий (`#FFE600`).
-2. **Етап 2: Vertical Exploded Layer Split (Вертикальне розкладання на 6 шарів)**
-   * При увімкненні тумблера **`explode`** у бічній панелі, активований куб висувається далі ($Z + 2.6$) і розділяється на 6 вертикальних паралелепіпедів із рівними інтервалами ($0.40 \text{ unit gap}$).
-   * Кожен шар отримує унікальний неоновий колір веселки, що відповідає своєму типу речення.
+### Stage 3: Expansion into 6 Layers (`explode: ON / Submode: Off`)
+* The cube advances to distance $Z = basePos.z \pm 2.6$ and smoothly expands vertically into 6 horizontal slabs with an initial clearance gap `curGap = 0.38`.
+
+### Stage 4: All Information Boards Mode (`Submode: All 6`)
+* All 6 slabs expand to gap `0.65`, synchronously rotate by $90^\circ$ around the X-axis, morph from dimensions $1.4 \times 0.2333 \times 1.4$ into wide-format posters $2.8000 \times 0.7000 \times 0.2333$, and display the complete grammatical formula with a smooth fade-in.
+
+### Stages 5–7: 4-Phase Single Focus Kinematics (`Submode: Single`)
+Transitioning to a specific formula triggers a strict 4-phase collision-free translation cycle:
+
+```
+        [ Matrix Stack Z = 2.6 ]
+                   │
+                   ▼  Phase 1 (Slide Out 0°)
+        [ Clearance Zone Z = 4.1 ]
+                   │
+                   ▼  Phase 2 (90° In-Flight Rotation)
+        [ Vertical Board Z = 4.1 at Layer Elevation ]
+                   │
+                   ▼  Phase 3 (Centering along Y)
+        [ Vertical Board Z = 4.1 centered at Y_cell ]
+                   │
+                   ▼  Phase 4 (Settle Retraction)
+        [ Final Focus Position Z = 3.7 centered at Y_cell ]
+```
+
+* **Sequential Handoff:** When switching to another layer, the active board first traverses all 4 phases in reverse to return to the stack before the newly selected layer begins its forward trajectory.
+* **Seamless Assembly into Cube on `explode: OFF`:** Slabs smoothly revert rotation, collapse vertical gaps (`gap -> 0.0`), retract along Z to distance 0.8, and only upon full contact seamlessly switch to the solid monolithic cube representation.
+
+### 4.3. Direct In-Scene 3D Interactivity (Layer Picking)
+* In `Single` mode, users can click not only in the sidebar, but also **directly on inactive slabs within the 3D space**.
+* Hovering over a slab in the stack smoothly raises its brightness from $15\%$ to $55\%$, intensifies the neon outline of the formula up to $95\%$, and changes the cursor to `pointer`. Clicking instantly triggers the focus-change kinematics.
 
 ---
 
-## 5. Технологічний Стек та Архітектура Коду
+## 5. Specialized Visual and Educational Modules
 
-| Компонент | Технологія / Бібліотека | Опис та Роль |
+### 5.1. Right-Hand Rule
+To facilitate spatial retention of grammatical dimensions, a high-detail 3D STL model of an anatomical human hand is integrated into the scene:
+* **Vector-to-Grammar Alignment:**
+  * **Index finger ($+X$)** $\to$ Voice (`Active Voice`).
+  * **Middle finger ($+Y$)** $\to$ Aspects (`Simple`, `Continuous`, `Perfect`, `Perfect Continuous`).
+  * **Thumb ($+Z$)** $\to$ Tenses (`Present`, `Past`, `Future`, `Future in the Past`).
+
+* **5 Visual Hand Styles:**
+  1. 🎯 *Chromatic Axes* (White Palm + RGB fingers corresponding to XYZ axes);
+  2. 🔷 *Hologram Cyber-Cyan* (Neon cyber glow);
+  3. 💜 *Royal Violet Crystal* (Crystal translucent glass);
+  4. ⚡ *Electric White Sensor* (Electric white sensor);
+  5. 🔶 *Warm Amber Glass* (Warm amber photopolymer).
+
+* **Interactive Floating HTML Badges (Axes Badges):** Anchored to fingertips, smoothly billboarding toward the camera to indicate current axes.
+* **Size Adjustment:** Smooth scale slider ranging from $0.5\times$ to $3.0\times$.
+
+### 5.2. Spatial Frame (Coordinate System) (Robotic CS Frame)
+* Orthogonal vector basis $X, Y, Z$ with orientation markers and a dedicated scale slider from $0.5\times$ to $3.0\times$.
+
+### 5.3. Dual-Perspective Headers
+* Typographic neon indicators of tense and aspect planes situated above the matrix.
+* **Automatic View Vector Tracking:** When orbiting from the X-axis side (Active Voice) around the Y-axis of **World CS (Three.js)** (or equivalently, around the Z-axis of **Robotic Right-Hand Rule Frame**) and intersecting the YZ plane of **World CS (Three.js)** (XY of **Robotic Right-Hand Rule Frame**), labels smoothly fade out in profile and mirror $180^\circ$ to face the viewer from the Passive Voice side.
+
+### 5.4. Shakespeare Holographic Quote Banner
+* Every toggle of the `to be` switch triggers a cinematic 3D floating hologram above the matrix:
+  > *“To be, or not to be, that is the question” — William Shakespeare*
+* Implements a smooth 3-phase lifecycle (flash intensity $\to$ gentle spatial drift $\to$ complete fade to black with zero lingering shadows).
+
+---
+
+## 6. Performance and Rendering Optimizations
+
+To maintain a stable **60 FPS** on mobile devices and laptops with integrated GPUs, a suite of graphic optimizations has been engineered:
+1. **Material LOD (Level of Detail):** 31 background inactive cubes are rendered with lightweight `meshStandardMaterial`, whereas computationally expensive glass refraction calculations (`meshPhysicalMaterial` with transmission and thickness) are dynamically enabled only for the selected cube and on pointer hover.
+2. **Unified Typography Draw Calls:** Three distinct face text instances are consolidated into a single multi-line `\n` node with line spacing `1.45`, reducing font render draw calls threefold.
+3. **Staggered Wave Appearance:** Cube face labels appear post-intro in a smooth diagonal wave mapped to $(x, y, z)$ spatial coordinates.
+4. **Scene Warmup:** Initial frame triggers `gl.compile(scene, camera)`, eliminating micro-stutters during subsequent runtime geometry instantiation.
+
+---
+
+## 7. Technology Stack
+
+| Layer | Technology | Role in Project |
 | :--- | :--- | :--- |
-| **Core Framework** | React 19 (`react`, `react-dom`) | Декларативне управління станом UI та 3D-компонентів |
-| **3D Engine** | Three.js + React Three Fiber (`@react-three/fiber`) | Рендеринг WebGL сцену, матеріалів, освітлення, шейдерів |
-| **3D Utilities** | React Three Drei (`@react-three/drei`) | `OrbitControls` (управління камерою), `Edges` (неонові ребра) |
-| **Build Tooling** | Vite 8.1 + Oxlint | Миттєва збірка HMR, високоефективний линтинг коду |
-| **Styling & UI** | Vanilla CSS (Glassmorphism design system) | Прозорі скляні панелі, неонові Glow-ефекти, адаптивність |
-| **Icons** | Lucide React (`lucide-react`) | Іконки фільтрів, тумблерів, навігації (`RotateCcw`, `Layers`) |
+| **Core UI** | React 19 (`react`, `react-dom`) | Reactive state management, filters, and formula inspector |
+| **3D Engine** | Three.js + React Three Fiber (`@react-three/fiber`) | WebGL scene rendering, lighting, shaders, and animations |
+| **3D Helpers** | React Three Drei (`@react-three/drei`) | `OrbitControls`, `Edges`, `Text` (Troika SDF 3D typography) |
+| **STL Parsing** | Three-stdlib (`STLLoader`) | Parsing binary geometry for the robotic hand asset |
+| **Styling** | Vanilla CSS (Cyber-Glass Design System) | Glassmorphism, responsive neon sliders and HUD panels |
+| **Icons** | Lucide React | Control panel and filter iconography |
+| **Build & Bundle**| Vite 8 + `vite-plugin-singlefile` | Bundling the application into a standalone single-file HTML |
 
 ---
 
-## 6. Структура Файлів Проєкту
+## 8. Project File Structure
 
 ```
 11_ENG_visu_grammar/
-├── Oпис.md                              # Початкові нотатки та концепція
-├── PROJECT_DESCRIPTION.md               # Повний деталізований технічний паспорт проєкту
-├── Grammatical_forms_15.02.26.txt       # Первинний граматичний датасет (4 масиви, 192 стани)
-└── visualizer/                          # React + R3F Веб-додаток Візуалізатора
-    ├── package.json                     # Конфігурація залежностей та скриптів збірки
-    ├── vite.config.js                   # Конфігурація Vite розробки
+├── PROJECT_DESCRIPTION.md               # Complete project technical specification (EN)
+├── PROJECT_DESCRIPTION_UKR.md           # Complete project technical specification (UKR)
+├── SCENE_STAGES_SPECIFICATION.md        # 7-stage 3D scene kinematics specification (EN)
+├── SCENE_STAGES_SPECIFICATION_UKR.md    # 7-stage 3D scene kinematics specification (UKR)
+├── parse_grammar.py                     # Python dataset generator for grammatical forms
+├── grammar_data.json                    # Full database (204 grammatical configurations)
+├── ENG_Visual_Grammar_V1_2026-10-27.html# Standalone portable distribution (Single-File)
+└── visualizer/                          # React + Three.js source codebase
+    ├── package.json                     # Dependencies and build script configuration
+    ├── vite.config.js                   # Vite configuration and singlefile plugin setup
     └── src/
-        ├── main.jsx                     # Точка входу React DOM
-        ├── App.jsx                      # Головний UI-контейнер, панель фільтрів, інспектор формул
-        ├── App.css                      # Стилі скляного інтерфейсу (Glassmorphism CSS)
-        ├── index.css                    # Глобальний темний дизайн-системний CSS
-        ├── grammar_data.json            # Ієрархічна структура даних формул граматики
-        ├── GrammarCube.jsx              # 3D-сцена сітки, lerp-анімації висування та розшарування
-        └── IntroAnimation.jsx           # Вступна 3D-анімація (Куб -> Паралелепіпед -> 32 куби)
+        ├── main.jsx                     # Application entry point
+        ├── App.jsx                      # Main UI shell, HUD controls, formula inspector
+        ├── App.css                      # Cyber-neon interface styling
+        ├── index.css                    # Base dark design system styles
+        ├── GrammarCube.jsx              # Matrix core: cubes, kinematics, hand, quote, headers
+        ├── IntroAnimation.jsx           # Intro sequence governed by volume conservation
+        └── data/
+            └── grammar_data.json        # Bundled grammar database for visualizer runtime
 ```
 
 ---
 
-## 7. Детальний Опис Джерел Даних (`grammar_data.json`)
+## 9. Launch and Deployment
 
-Формули граматичних типів речень структуровані у виглядів JSON-дерева 4-го рівня:
-
-$$\text{grammarData}[\text{Voice}][\text{VerbType}][\text{Aspect}][\text{Time}][\text{SentenceType}]$$
-
-Приклад запису для `Active Voice` $\rightarrow$ `Standard Verb` $\rightarrow$ `Continuous` $\rightarrow$ `Present`:
-
-```json
-{
-  "Affirmative": {
-    "formula": "S + am/is/are + V-ing",
-    "notes": "Present Continuous Affirmative"
-  },
-  "Negative full (not)": {
-    "formula": "S + am/is/are + not + V-ing",
-    "notes": "Present Continuous Negative Full"
-  },
-  "Negative contracted (n't)": {
-    "formula": "S + isn't/aren't / I'm not + V-ing",
-    "notes": "Present Continuous Negative Contracted"
-  },
-  "Interrogative about Affirmative": {
-    "formula": "Am/Is/Are + S + V-ing?",
-    "notes": "Present Continuous Interrogative Affirmative"
-  },
-  "Interrogative about Negative full (not)": {
-    "formula": "Am/Is/Are + S + not + V-ing?",
-    "notes": "Present Continuous Interrogative Negative Full"
-  },
-  "Interrogative about Negative contracted (n't)": {
-    "formula": "Isn't/Aren't + S + V-ing?",
-    "notes": "Present Continuous Interrogative Negative Contracted"
-  }
-}
-```
-
----
-
-## 8. Інструкція зі Запуску та Локального Розгортання
-
-### 8.1. Вимоги до середовища
-* **Node.js**: v18.0.0 або вище
-* **npm**: v9.0.0 або вище
-
-### 8.2. Команди запуску розробки
-
+### 9.1. Local Development Environment
 ```bash
-# 1. Перехід у директорію візуалізатора
-cd /d "d:\02_W\06_Python\11_ENG_visu_grammar\visualizer"
-
-# 2. Встановлення залежностей (якщо не встановлено)
+cd "d:\02_W\06_Python\11_ENG_visu_grammar\visualizer"
 npm install
-
-# 3. Запуск dev-сервера локально
 npm run dev
 ```
+The application opens at: `http://localhost:5173/`
 
-Після запуску додаток буде доступний за адресою: `http://localhost:5173/`
+### 9.2. Building the Standalone Distribution
+```bash
+npm run build
+```
+The resulting `visualizer/dist/index.html` file is completely self-contained (Self-Contained Single File). It can be sent via email, stored on a flash drive, or served via GitHub Pages — executing natively in any desktop or mobile browser without requiring Node.js or a backend server.
 
-### 8.3. Кнопка `Replay`
-У верхній частині лівої бічної панелі додатка розташовано зелену неонову кнопку **`Replay`**, яка дозволяє в будь-який момент перезапустити вступну 3D-анімацію без скидання кута камери чи стану фільтрів.
+### 9.3. GitHub Pages Deployment
+The project is configured for automated hosting on GitHub Pages:
+👉 **`https://e13740e.github.io/eng-visual-grammar/`**
 
 ---
 
-## 9. Підсумок та Перспективи
+## 10. Summary
 
-Проєкт **ENG Visual Grammar** являє собою поєднання обчислювальної лінгвістики, математичної просторової геометрії та сучасних WebGL 3D-технологій. Він вирішує фундаментальну проблему наочності складних граматичних систем і є готовим інструментом для інтерактивного навчання, презентацій та створення кінематографічних освітніх відеоматеріалів.
+**ENG Visual Grammar** is a comprehensive spatial-mathematical educational system. It eliminates ambiguities across English tenses through the physical intuition of space, right-hand rule vector relationships, and continuous, elegant 3D kinematics.
