@@ -117,15 +117,28 @@ export default function App() {
 
   return (
     <div className="app-container">
-      {/* Mobile Floating Toggle Button (shown only when drawer is closed) */}
+      {/* Mobile Top Bar (Floating Hamburger + Start button) */}
       {!isMobileMenuOpen && (
-        <button 
-          className="mobile-menu-toggle"
-          onClick={() => setIsMobileMenuOpen(true)}
-          aria-label="Open Menu"
-        >
-          <Menu size={22} />
-        </button>
+        <div className="mobile-top-bar">
+          <button 
+            className="mobile-menu-toggle"
+            onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Open Menu"
+          >
+            <Menu size={22} />
+          </button>
+
+          {!isIntroStarted && (
+            <button
+              onClick={handleStartIntro}
+              className="mobile-start-btn"
+              title="Start / Activate 3D Matrix Transformations"
+            >
+              <Play size={16} fill="#39FF14" />
+              Start
+            </button>
+          )}
+        </div>
       )}
 
       {/* Backdrop for closing mobile sidebar on tap outside */}

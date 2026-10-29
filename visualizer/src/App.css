@@ -293,13 +293,13 @@ input:checked + .slider:before {
 /* Mobile & Tablet Responsive Enhancements                      */
 /* ------------------------------------------------------------- */
 
-/* Hidden on desktop by default */
+/* Mobile controls: hidden on desktop by default */
+.mobile-top-bar {
+  display: none;
+}
+
 .mobile-menu-toggle {
   display: none;
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  z-index: 50;
   width: 44px;
   height: 44px;
   border-radius: 12px;
@@ -313,11 +313,44 @@ input:checked + .slider:before {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: all 0.25s ease;
+  flex-shrink: 0;
 }
 
 .mobile-menu-toggle:hover {
   background: rgba(0, 240, 255, 0.15);
   border-color: #00F0FF;
+}
+
+.mobile-start-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  height: 44px;
+  padding: 0 16px;
+  background: rgba(57, 255, 20, 0.22);
+  border: 1.5px solid #39FF14;
+  color: #39FF14;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(57, 255, 20, 0.4);
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.mobile-start-btn:hover {
+  background: rgba(57, 255, 20, 0.35);
+  box-shadow: 0 0 22px rgba(57, 255, 20, 0.6);
+  transform: translateY(-1px);
+}
+
+.mobile-start-btn:active {
+  transform: translateY(1px);
 }
 
 .mobile-close-btn {
@@ -344,6 +377,17 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 900px) {
+  .mobile-top-bar {
+    display: flex;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 50;
+    gap: 12px;
+    align-items: center;
+  }
+
   .mobile-menu-toggle {
     display: flex;
   }
