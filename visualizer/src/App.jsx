@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { Sparkles, HelpCircle, RefreshCw, Layers, Compass, ZoomIn, RotateCcw, Play } from 'lucide-react';
+import { Sparkles, HelpCircle, RefreshCw, Layers, Compass, ZoomIn, RotateCcw, Play, Menu, X } from 'lucide-react';
 import grammarData from './grammar_data.json';
 import GrammarCube from './GrammarCube';
 import './App.css';
@@ -54,6 +54,7 @@ export default function App() {
   const [isIntroActive, setIsIntroActive] = useState(true);
   const [isIntroStarted, setIsIntroStarted] = useState(false);
   const [introKey, setIntroKey] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Start Intro sequence animation
   const handleStartIntro = () => {
@@ -116,13 +117,39 @@ export default function App() {
 
   return (
     <div className="app-container">
+      {/* Mobile Floating Toggle Button */}
+      <button 
+        className="mobile-menu-toggle"
+        onClick={() => setIsMobileMenuOpen(prev => !prev)}
+        aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
+      >
+        {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+      </button>
+
+      {/* Backdrop for closing mobile sidebar on tap outside */}
+      {isMobileMenuOpen && (
+        <div 
+          className="mobile-backdrop" 
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
       {/* Sidebar Panel */}
-      <div className="sidebar glass-panel">
+      <div className={`sidebar glass-panel ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         {/* Header */}
         <div className="app-header" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          <div>
-            <h1 className="app-title">ENG Visual Grammar</h1>
-            <p className="app-subtitle">Interactive 3D Grammar Matrix</p>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+            <div>
+              <h1 className="app-title">ENG Visual Grammar</h1>
+              <p className="app-subtitle">Interactive 3D Grammar Matrix</p>
+            </div>
+            {/* Close button inside header on mobile */}
+            <button 
+              className="mobile-close-btn"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <X size={18} />
+            </button>
           </div>
 
           {/* Action Buttons: Moved below title/subtitle, taking full panel width */}
