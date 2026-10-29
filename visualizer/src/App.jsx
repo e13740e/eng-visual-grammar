@@ -154,55 +154,56 @@ export default function App() {
             </button>
           </div>
 
-          {/* Action Buttons: Moved below title/subtitle, taking full panel width */}
-          <div style={{ display: 'flex', gap: '8px', width: '100%', marginTop: '2px' }}>
-            <button 
-              onClick={handleStartIntro}
-              className={`filter-btn ${isIntroStarted ? 'active' : ''}`} 
-              title="Start / Activate 3D Matrix Transformations"
-              disabled={isIntroStarted && !isIntroActive}
-              style={{ 
-                flex: 1,
-                padding: '8px 12px', 
-                fontSize: '0.8rem', 
-                fontWeight: '600',
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center',
-                gap: '6px',
-                background: isIntroStarted ? 'rgba(0, 240, 255, 0.15)' : 'rgba(57, 255, 20, 0.25)',
-                borderColor: isIntroStarted ? '#00F0FF' : '#39FF14',
-                color: isIntroStarted ? '#00F0FF' : '#39FF14',
-                boxShadow: isIntroStarted ? '0 0 8px rgba(0, 240, 255, 0.3)' : '0 0 10px rgba(57, 255, 20, 0.4)',
-                cursor: (isIntroStarted && !isIntroActive) ? 'default' : 'pointer',
-                opacity: (isIntroStarted && !isIntroActive) ? 0.6 : 1
-              }}
-            >
-              <Play size={14} fill={isIntroStarted ? '#00F0FF' : '#39FF14'} />
-              {isIntroStarted ? 'Active' : 'Start'}
-            </button>
-
-            <button 
-              onClick={handleReplayIntro}
-              className="filter-btn" 
-              title="Reset to Solid Monolithic Cube"
-              style={{ 
-                flex: 1,
-                padding: '8px 12px', 
-                fontSize: '0.8rem', 
-                fontWeight: '500',
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center',
-                gap: '6px',
-                background: 'rgba(255, 255, 255, 0.05)',
-                borderColor: 'rgba(255, 255, 255, 0.2)',
-                color: '#94a3b8'
-              }}
-            >
-              <RotateCcw size={14} />
-              Replay
-            </button>
+          {/* Action Button: Single full-width dynamic button (Start -> Replay) */}
+          <div style={{ width: '100%', marginTop: '2px' }}>
+            {!isIntroStarted ? (
+              <button 
+                onClick={handleStartIntro}
+                className="filter-btn" 
+                title="Start / Activate 3D Matrix Transformations"
+                style={{ 
+                  width: '100%',
+                  padding: '9px 14px', 
+                  fontSize: '0.85rem', 
+                  fontWeight: '600',
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  gap: '8px',
+                  background: 'rgba(57, 255, 20, 0.25)',
+                  borderColor: '#39FF14',
+                  color: '#39FF14',
+                  boxShadow: '0 0 10px rgba(57, 255, 20, 0.4)',
+                  cursor: 'pointer'
+                }}
+              >
+                <Play size={15} fill="#39FF14" />
+                Start
+              </button>
+            ) : (
+              <button 
+                onClick={handleReplayIntro}
+                className="filter-btn" 
+                title="Reset to Initial Sphere / Monolithic Cube"
+                style={{ 
+                  width: '100%',
+                  padding: '9px 14px', 
+                  fontSize: '0.85rem', 
+                  fontWeight: '500',
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  gap: '8px',
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderColor: 'rgba(255, 255, 255, 0.2)',
+                  color: '#94a3b8',
+                  cursor: 'pointer'
+                }}
+              >
+                <RotateCcw size={15} />
+                Replay
+              </button>
+            )}
           </div>
         </div>
 
