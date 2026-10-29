@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { Sparkles, HelpCircle, RefreshCw, Layers, Compass, ZoomIn, RotateCcw, Play, Menu, X } from 'lucide-react';
+import { Sparkles, HelpCircle, RefreshCw, Layers, Compass, ZoomIn, RotateCcw, Play, Menu, X, Move, ChevronsLeft } from 'lucide-react';
 import grammarData from './grammar_data.json';
 import GrammarCube from './GrammarCube';
 import './App.css';
@@ -55,6 +55,7 @@ export default function App() {
   const [isIntroStarted, setIsIntroStarted] = useState(false);
   const [introKey, setIntroKey] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(true);
 
   // Start Intro sequence animation
   const handleStartIntro = () => {
@@ -676,20 +677,45 @@ export default function App() {
           </React.Suspense>
         </Canvas>
 
-        {/* Instructions Overlay */}
-        <div className="instructions-overlay glass-panel">
-          <div className="instruction-item">
-            <Compass size={14} />
-            <span><span className="instruction-key">L-Click + Drag</span> Rotate</span>
-          </div>
-          <div className="instruction-item">
-            <ZoomIn size={14} />
-            <span><span className="instruction-key">Scroll</span> Zoom</span>
-          </div>
-          <div className="instruction-item">
-            <Sparkles size={14} />
-            <span><span className="instruction-key">Click Box</span> Inspect Cell</span>
-          </div>
+        {/* Instructions Overlay & Toggle */}
+        <div className={`instructions-overlay-wrapper ${!showInstructions ? 'collapsed' : ''}`}>
+          {showInstructions ? (
+            <div className="instructions-overlay glass-panel">
+              <div className="instruction-item">
+                <Compass size={14} />
+                <span><span className="instruction-key">L-Click + Drag</span> Rotate</span>
+              </div>
+              <div className="instruction-item">
+                <Move size={14} />
+                <span><span className="instruction-key">R-Click / Ctrl + Drag</span> Pan</span>
+              </div>
+              <div className="instruction-item">
+                <ZoomIn size={14} />
+                <span><span className="instruction-key">Scroll</span> Zoom</span>
+              </div>
+              <div className="instruction-item">
+                <Sparkles size={14} />
+                <span><span className="instruction-key">Click Block</span> Inspect</span>
+              </div>
+              <button 
+                className="instructions-toggle-btn"
+                onClick={() => setShowInstructions(false)}
+                title="Hide instructions"
+                aria-label="Hide instructions"
+              >
+                <X size={13} />
+              </button>
+            </div>
+          ) : (
+            <button 
+              className="instructions-toggle-btn collapsed-btn"
+              onClick={() => setShowInstructions(true)}
+              title="Show instructions"
+              aria-label="Show instructions"
+            >
+              <ChevronsLeft size={15} />
+            </button>
+          )}
         </div>
       </div>
     </div>

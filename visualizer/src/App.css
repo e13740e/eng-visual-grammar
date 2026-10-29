@@ -263,30 +263,87 @@ input:checked + .slider:before {
 }
 
 /* Bottom status bar or instructions */
-.instructions-overlay {
+.instructions-overlay-wrapper {
   position: absolute;
   bottom: 24px;
   right: 24px;
-  padding: 12px 20px;
-  pointer-events: none;
-  font-size: 0.85rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.instructions-overlay {
+  padding: 10px 14px 10px 18px;
+  font-size: 0.82rem;
   color: #94a3b8;
   display: flex;
-  gap: 16px;
+  align-items: center;
+  gap: 14px;
+  user-select: none;
 }
 
 .instruction-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  white-space: nowrap;
 }
 
 .instruction-key {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   padding: 2px 6px;
   border-radius: 4px;
   font-family: monospace;
+  font-size: 0.78rem;
+  color: #e2e8f0;
   border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.instructions-toggle-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  margin-left: 6px;
+  flex-shrink: 0;
+}
+
+.instructions-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Almost transparent toggle button when collapsed */
+.instructions-toggle-btn.collapsed-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgba(7, 10, 19, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0.55;
+  margin: 0;
+}
+
+.instructions-toggle-btn.collapsed-btn:hover {
+  opacity: 1;
+  background: rgba(7, 10, 19, 0.75);
+  color: #00F0FF;
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
 }
 
 /* ------------------------------------------------------------- */
@@ -460,18 +517,31 @@ input:checked + .slider:before {
   }
 
   /* Compact HUD instructions on mobile */
-  .instructions-overlay {
+  .instructions-overlay-wrapper {
     bottom: 12px;
     right: 12px;
-    padding: 6px 12px;
-    font-size: 0.75rem;
+  }
+
+  .instructions-overlay {
+    padding: 6px 10px;
+    font-size: 0.72rem;
     gap: 8px;
-    background: rgba(7, 10, 19, 0.7);
+    background: rgba(7, 10, 19, 0.85);
     border-radius: 8px;
   }
 
   .instruction-item:not(:first-child) {
-    display: none; /* Only show basic rotation tip on mobile screens */
+    display: none; /* Show basic rotation tip on mobile screens */
+  }
+
+  .instructions-toggle-btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .instructions-toggle-btn.collapsed-btn {
+    width: 26px;
+    height: 26px;
   }
 }
 
